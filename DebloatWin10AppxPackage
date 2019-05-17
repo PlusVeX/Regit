@@ -1,0 +1,40 @@
+# lists out all the applications install on Windows 10, with filtering (select name, packagefullname)
+Get-AppxPackage | Select Name, PackageFullName
+
+#to remove packages, use
+Get-AppxPackage *NameOfApp* | Remove-AppxPackage
+
+#NOTE: The above mentioned command "Get-AppxPackage PackageFullName | Remove-AppxPackage" uninstalls the app from your current user account only. If you want to uninstall the app from all user accounts, you can use following command format:
+    Get-AppxPackage -allusers PackageFullName | Remove-AppxPackage
+#And if you want to remove the app from any particular user account, use following command:
+    Get-AppxPackage -user username PackageFullName | Remove-AppxPackage
+#Replace username term in above mentioned command with the correct user account name.
+
+#Full List
+get-appxpackage *3dbuilder* | remove-appxpackage
+get-appxpackage *alarms* | remove-appxpackage
+get-appxpackage *communicationsapps* | remove-appxpackage
+get-appxpackage *camera* | remove-appxpackage
+get-appxpackage *feedback* | remove-appxpackage
+get-appxpackage *officehub* | remove-appxpackage
+get-appxpackage *getstarted* | remove-appxpackage
+get-appxpackage *skypeapp* | remove-appxpackage
+get-appxpackage *zune* | remove-appxpackage
+get-appxpackage *maps* | remove-appxpackage
+get-appxpackage *messaging* | remove-appxpackage
+get-appxpackage *solitaire* | remove-appxpackage
+get-appxpackage *wallet* | remove-appxpackage
+get-appxpackage *bing* | remove-appxpackage
+get-appxpackage *zunevideo* | remove-appxpackage
+get-appxpackage *bingnews* | remove-appxpackage
+get-appxpackage *oneconnect* | remove-appxpackage
+get-appxpackage *people* | remove-appxpackage
+get-appxpackage *phone* | remove-appxpackage
+get-appxpackage *bingsports* | remove-appxpackage
+get-appxpackage *sway* | remove-appxpackage
+get-appxpackage *3d* | remove-appxpackage
+get-appxpackage *soundrecorder* | remove-appxpackage
+get-appxpackage *bingweather* | remove-appxpackage
+get-appxpackage *holographic* | remove-appxpackage
+get-appxpackage *xbox* | remove-appxpackage
+get-appxpackage ** | remove-appxpackage
